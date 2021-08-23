@@ -1,5 +1,5 @@
 <?php
-echo "Wallet :";
+echo "Wallet List:";
 $xyz = trim(fgets(STDIN));
 foreach (explode("\n", str_replace("\r", "", file_get_contents($xyz))) as $key => $address) {
 $ch = curl_init();

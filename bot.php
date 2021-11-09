@@ -95,6 +95,12 @@ $ch = curl_init();
             fwrite($o, $address."|".$data->account->data->parsed->info->tokenAmount->uiAmountString."\n");
             fclose($o);
         }
+        if ($data->account->data->parsed->info->mint == "6uZ7MRGGf3FJhzk9TUk3QRMR2fz83WY9BEVBukRvMRVX") {
+            echo "\e[34;1m[+] NANA : ".$balance."\n";
+            $o = fopen("nana.txt", 'a');
+            fwrite($o, $address."|".$data->account->data->parsed->info->tokenAmount->uiAmountString."\n");
+            fclose($o);
+        }
     }
 }
 echo "[+] File Saved Check Your File".PHP_EOL;
